@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Page Title</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+<a href="javascript: var a = 5"></a>
+
+<body>
+	<script>
+
+		// function Car(brand, wheels, body, engine) {
+		// 	this.brand = brand;
+		// 	this.wheels = wheels;
+		// 	this.body = body;
+		// 	this.engine = engine;
+
+		// 	this.start = function () {
+		// 		console.log(`${this.brand} is start`)
+		// 	}
+		// 	this.stop = function () {
+		// 		console.log(`${this.brand} is stop`)
+		// 	}
+		// }
+		// const bmw = new Car('bmw', 4, 'cabriolet', 'diesel');
+
+		class Test {
+			constructor(name) {
+				this.name = name
+			}
+
+			testMethod() {
+				console.log('test')
+			}
+		}
+		class Car extends Test {
+			constructor(name, brand, wheels, body, engine) {
+				super(name);
+				this.brand = brand;
+				this.wheels = wheels;
+				this.body = body;
+				this.engine = engine;
+			}
+			run() {
+				console.log(`${this.brand} is run`)
+			}
+			start() {
+				console.log(`${this.brand} is start`)
+			}
+			stop() {
+				console.log(`${this.brand} is stop`)
+			}
+		}
+
+		const bmw = new Car('test', 'bmw', 4, 'cabriolet', 'diesel');
+		const audi = new Car('test2', 'audi', 4, 'sedan', 'gazoline');
+	</script>
+</body>
+
+</html>
