@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Page Title</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+
+</head>
+
+<body>
+
+	<input type="text" name="phonename" value="hello"><br><br><br>
+	<input type="image" name="image" value="25"><br><br><br>
+	<textarea name="text" id="dis" cols="30" rows="10"></textarea><br><br><br>
+	<button onclick="addItem()">add</button>
+
+	<button onclick="render()">render</button>
+
+	<div id="app"></div>
+	<script>
+		const items = []
+		const additem = () => {
+			const phonename = document.querySelector(`[phoneName]`).value;
+			const image = document.querySelector(`[image]`).value;
+			const dis = document.querySelector(`[dis]`).value;
+			const obj = {
+				phonename,
+				image,
+				dis
+			}
+			items.push(obj)
+		}
+		const render = () => {
+			const htmlText = item.reduse((acc, item) => {
+				return
+			})
+		}
+	</script>
+</body>
+
+</html>

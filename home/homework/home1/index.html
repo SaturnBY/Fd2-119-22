@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Page Title</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+	<script>
+		function accum(s) {
+			let sumbol = s.split('');
+
+			for (let i = 0; i < sumbol.length; i++) {
+				let letter = s[i];
+				sumbol[i] = letter.toUpperCase() + new Array(i + 1).join(letter.toLowerCase());
+			}
+
+
+			return sumbol.join('-');
+		}
+	</script>
+
+</body>
+
+</html>

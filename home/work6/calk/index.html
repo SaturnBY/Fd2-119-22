@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Page Title</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+	<script src='main.js'></script>
+</head>
+
+<body>
+	<style>
+		.blok {
+			width: 500px;
+			height: 500px;
+		}
+
+		.blok input {
+			width: 50px;
+			height: 50px;
+			text-align: center;
+		}
+
+		.blok .nul {
+			width: 111px;
+		}
+	</style>
+
+	<body>
+		<div class="blok">
+			<input type="1" value="1" onclick="getNumber(1)">
+			<input type="2" value="2" onclick="getNumber(2)">
+			<input type="3" value="3" onclick="getNumber(3)">
+			<input type="+" value="+" onclick="getOper('+')"><br>
+			<input type="4" value="4" onclick="getNumber(4)">
+			<input type="5" value="5" onclick="getNumber(5)">
+			<input type="6" value="6" onclick="getNumber(6)">
+			<input type="-" value="-" onclick="getOper('-')"><br>
+			<input type="7" value="7" onclick="getNumber(7)">
+			<input type="8" value="8" onclick="getNumber(8)">
+			<input type="9" value="9" onclick="getNumber(9)">
+			<input type="/" value="/" onclick="getNumber('/')"><br>
+			<input class="nul" type="0" value="0" onclick="getNumber(0)">
+			<input type="=" value="=" onclick="res()">
+			<input type="*" value="*" onclick="getOper('*')">
+		</div>
+
+		<script>
+			let num1;
+			let num2;
+		
+
+			function getNumber(x) {
+				if (num1 === null) {
+					num1 = x
+				} else {
+					num2 = x
+				}
+			}
+			function getOper(y) {
+				if (oper === y) {
+					oper = y
+				} else {
+					oper = y
+				}
+			}
+
+			function res() {
+				switch (oper) {
+					case "+": console.log(null + y); break;
+					case "-": console.log(null - y); break;
+					case "/": console.log(null / y); break;
+					case "*": console.log(null * y); break;
+				}
+			}
+
+		// 	let a;
+        // let b;
+        // function getNumber(num) {
+        //     if (!a) {
+        //         a = num
+        //     } else {
+        //         b = num
+        //     }
+        // }
+        // let sign;
+        // function getSign(fff) {
+        
+        //     sign = fff;
+            
+        // }
+        // function res(){
+        //     switch (sign) {
+        //         case "-":
+        //             console.log(a-b);
+        //             break;
+        //         case '+':
+        //             console.log(a+b);
+        //             break;
+        //         case '/':
+        //             console.log(a/b);
+        //             break;
+        //         case '*':
+        //             console.log(a*b);
+        //             break;
+			
+		</script>
+
+	</body>
+
+</html>
