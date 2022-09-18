@@ -7,9 +7,42 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 </head>
+<style>
+	/* body {
+		position: relative;
+	} */
+
+	#box {
+		width: 100px;
+		height: 100px;
+		background-color: brown;
+		position: absolute;
+	}
+</style>
 
 <body>
-
+	<div id="box"></div>
 </body>
+<script>
+
+	const box = document.getElementById('box')
+	let rightCoord = 0
+	let topCoord = 0
+
+	window.addEventListener('keyup', (e) => {
+		switch (e.keyCode) {
+			case 39: rightCoord += 10; break;
+			case 40: topCoord += 10; break;
+
+
+
+
+		}
+		box.style.left = rightCoord + 'px'
+		box.style.top = topCoord + 'px'
+	})
+
+
+</script>
 
 </html>

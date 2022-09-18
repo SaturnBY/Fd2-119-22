@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Create Tags</title>
+</head>
+
+<body>
+	<div>
+		<h1>CREATE_TAGS</h1>
+		<p>
+			Сделать редактор тегов, то есть вы делаете кнопки H1...H6, P, UL( рядом будут по + появляться LI) <br>
+			и если пользователь нажмет на эти кнопки, дать ему ввести текст (не важно каким способом, но рекомендую
+			через input). <br>
+			После этот текст отобразить в нужном теге (кнопка на которую он нажал даст вам понять какой тег он хочет
+			использовать) <br>
+			в какой нибудь области(div) </p>
+	</div>
+
+	<button onclick="createTag('h1')">H1</button><input type="text" placeholder='h1'><br>
+	<button onclick="createTag('h2')">H2</button><input type="text" placeholder='h2'><br>
+	<button onclick="createTag('h3')">H3</button><input type="text" placeholder='h3'><br>
+	<button onclick="createTag('h4')">H4</button><input type="text" placeholder='h4'><br>
+	<button onclick="createTag('h5')">H5</button><input type="text" placeholder='h5'><br>
+	<button onclick="createTag('h6')">H6</button><input type="text" placeholder='h6'><br>
+	<button onclick="createTag('p')">P</button><input type="text" placeholder='p'><br>
+	<button onclick="createUl()">UL</button><button onclick="createLi()">+</button><input type="text"
+		placeholder='li'><br>
+
+	<div id="Tags"></div>
+
+	<script src="/homework/homeworkCreateTags/script.js"></script>
+</body>
+
+</html>
