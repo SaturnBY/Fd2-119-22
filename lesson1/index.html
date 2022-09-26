@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hangman</title>
+</head>
+
+<body>
+	<h1>Виселица!</h1>
+	<script>
+		// создаем массив со словаит
+		const words = ['холодильник', 'программа', 'змея', 'обезьяна', 'холод', 'дождь', 'мрак'];
+		// создаем случайное слово
+		const word = words[Math.floor(Math.random() * words.length)]
+		// создаем итоговый массив
+		const ansverArray = [];
+		for (let i = 0; i < word.length; i++) {
+			ansverArray[i] = '_';
+		}
+		let remainingLetters = word.length;
+		//игровой цикл
+		while (remainingLetters > 0) {
+			// состояние игры
+			alert(ansverArray.join(' '));
+			// запрашиваем вариант ответа
+			const guess = prompt('Угадайте букву, или нажмити Отмена для выхода из игры!');
+			if (guess === null) {
+				// выход из игрового циклв
+				break;
+			} else if (guess.length !== 1) {
+				alert('Пожалуйста, введите одиночную букву.');
+			} else {
+				// обновдение состояние игры
+				for (let j = 0; j < word.length; j++) {
+					if (word[j] === guess) {
+						ansverArray[j] = guess;
+						remainingLetters--;
+					}
+				}
+			}
+			// конец игрового цикла
+		}
+		// отображение ответа и поздравление
+		alert(ansverArray.join(' '));
+		alert('Отлично! Вы угадали слово ' + word);
+	</script>
+</body>
+
+</html>
