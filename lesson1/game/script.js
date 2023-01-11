@@ -69,9 +69,6 @@ if(snakeX == food.x && snakeY == food.y) {
 } else
 // удаление следа (чистим массив)
 snake.pop();
-
-
-
 if(snakeX < blockSize || snakeX > blockSize * 17
 	|| snakeY < 3 * blockSize || snakeY > blockSize * 17)
 	clearInterval(game);
@@ -86,7 +83,6 @@ let newHead={
 	y:snakeY,
 };
 eatTail(newHead, snake);
-
 snake.unshift(newHead);
 }
 let game = setInterval(drawBorder, 100);
